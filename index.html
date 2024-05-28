@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out the form below to provide your feedback. Thank you :)</p>
+  </header>
+  
+  <main>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label id="surname-label" for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" id="number" name="age" min="10" max="100" placeholder="Enter your age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dropdown">What is your current role?</label>
+        <select id="dropdown" name="role" required>
+          <option value="" disabled selected>Select your role</option>
+          <option value="student">Student</option>
+          <option value="full-time-job">Full-time Job</option>
+          <option value="part-time-job">Part-time Job</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="not-say">Prefer not to say</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>How did you hear about us?</p>
+        <label><input type="radio" name="referrer" value="friends" required> Friends</label>
+        <label><input type="radio" name="referrer" value="search-engine"> Search Engine</label>
+        <label><input type="radio" name="referrer" value="advertisement"> Advertisement</label>
+      </div>
+
+      <div class="form-group">
+        <p>Which services are you interested in? (Check all that apply)</p>
+        <label><input type="checkbox" name="services" value="web-development"> Web Development</label>
+        <label><input type="checkbox" name="services" value="data-analysis"> Data Analysis</label>
+        <label><input type="checkbox" name="services" value="machine-learning"> Machine Learning</label>
+        <label><input type="checkbox" name="services" value="cybersecurity"> Cybersecurity</label>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
